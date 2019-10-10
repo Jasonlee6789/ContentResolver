@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnRetrieve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="#76CCC3"
+        android:hint="ID to Delete"
+        android:onClick="showContacts"
+        android:text="Show Contacts" />
+
+    <Button
+        android:id="@+id/btnIDButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/btnRetrieve"
+        android:layout_toRightOf="@+id/deleteIDEditText"
+        android:backgroundTint="#76CCC3"
+        android:onClick="deleteContact"
+        android:text="Delete ID"
+        />
+
+    <Button
+        android:id="@+id/findContactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/btnIDButton"
+        android:layout_toRightOf="@+id/deleteIDEditText"
+        android:backgroundTint="#76CCC3"
+        android:onClick="lookupContact"
+        android:text="Find Contact" />
+
+    <Button
+        android:id="@+id/addContactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/findContactButton"
+        android:layout_alignTop="@+id/addNameEditText"
+        android:layout_toRightOf="@+id/deleteIDEditText"
+        android:layout_toEndOf="@+id/addNameEditText"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:backgroundTint="#76CCC3"
+        android:onClick="addContact"
+        android:text="Add Contact" />
+
+    <EditText
+        android:id="@+id/deleteIDEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRetrieve"
+        android:hint="ID to Delete " />
+
+    <EditText
+        android:id="@+id/addNameEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLookUpEditText"
+        android:hint="Name to Add" />
+
+    <EditText
+        android:id="@+id/idLookUpEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleteIDEditText"
+        android:hint="ID to Find " />
+
+    <TextView
+        android:id="@+id/contactsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addNameEditText"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:text="Contacts"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+
+</RelativeLayout>
